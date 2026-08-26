@@ -57,21 +57,19 @@ Generación completa del tema desde el esqueleto oficial `Test_Prompting/temas a
 
 ### Corrección posterior a la publicación (mismo día)
 
-**D2 quedó truncado por un `sed` y ningún control lo detectó.** Al corregir las tildes del texto de los SVG se usó `sed -i ''` con patrones que terminaban en `<` justo antes del delimitador `/` (`s/>degradacion de las</>degradación de las</`). En **D2** eso se comió el `<` de un `</text>` de cierre, dejando `degradación de las/text>`: el SVG quedó **mal formado** y el navegador **descartó en silencio** todo lo que venía después —la caja RIESGO, las tres flechas, el bloque de tratamiento del riesgo y el riesgo residual—.
+**D2 estaba truncado y ninguno de los tres controles lo detectó.** En el SVG del diagrama D2 un `</text>` de cierre había perdido su `<`, quedando `degradación de las/text>`. Consecuencia visible: se pintaban las tres primeras cajas y desaparecían la caja RIESGO, las tres flechas, el bloque de tratamiento del riesgo y el riesgo residual. Detectado por Joan sobre el tema ya publicado.
 
-Lo grave no es la errata, es que **pasó los tres controles**:
-- El **getBBox** dio «0 desbordes y 0 colisiones»: un SVG truncado no tiene elementos que desborden ni colisionen, así que devuelve un **falso OK**.
-- El **recuento de `<svg`** seguía siendo 18, porque la etiqueta de apertura estaba intacta.
-- La **revisión visual** se hizo **antes** de aplicar el `sed`, y no se repitió después.
+**Por qué no lo vio el QA (esto sí está medido).** Se reprodujo el fallo a propósito y se midió el DOM resultante:
 
-Detectado por Joan al mirar el tema publicado.
+- El parser **HTML es tolerante**: con el `</text>` roto, el navegador **sigue creando los 11 `<rect>` y los 30 `<text>`** del diagrama. Por eso el **recuento de elementos cuadraba** y no delataba nada.
+- Esos elementos quedan anidados dentro del `<text>` que nunca se cierra y **no se pintan**: el último `<text>` mide `0×0`. Un elemento de anchura cero **ni desborda el viewBox ni colisiona con nadie**, así que el **`getBBox` devolvió «0 desbordes y 0 colisiones»** — un **falso OK**, el tercero de esta serie tras el «0 SVG evaluados» y el Chrome zombi.
+- La altura pintada del SVG se deformaba (469 px frente a los ~340 del `viewBox`), única señal que quedaba, y no se estaba comprobando.
 
-**Dos lecciones incorporadas:**
+**Causa del tecleo: no determinada.** Se sospechó del `sed` usado para corregir tildes y **se descartó por medición**: se reprodujo el comando compuesto exacto sobre una línea aislada y sobre el fichero completo real, y también los otros tres `sed` posteriores a la revisión visual. **Ninguno rompe la cadena.** Lo más probable es un error en la escritura original del SVG; no se deja escrito un mecanismo que no se ha podido comprobar.
 
-1. **No usar `sed` sobre estos ficheros para tocar texto con acentos o marcado.** Usar Python con `str.replace()` y una aserción del número de coincidencias, como el `fix_tildes.py` de esta misma sesión, que no rompió nada.
-2. **Validar los SVG como XML antes de medirlos.** Añadida al arranque del QA una pasada con `xml.etree.ElementTree.fromstring()` sobre cada `<svg>...</svg>`, que aborta si alguno está mal formado, más una comprobación de que el número de SVG del DOM coincide con el del fichero. Sin esa pasada, el getBBox miente.
+**Defensa incorporada al QA:** validación **XML** de cada `<svg>...</svg>` con `xml.etree.ElementTree.fromstring()` **antes** de medir nada, que aborta si alguno está mal formado, más comprobación de que el número de SVG del DOM coincide con el del fichero. Es el único control de los probados que detecta este fallo: el parser XML es estricto donde el del navegador es tolerante.
 
-**Regla general que se deriva:** después de cualquier retoque sobre los `.md`, hay que **repetir la captura visual**, no solo el QA programático.
+**Regla general:** el `getBBox` valida **composición**, no **integridad**. Hay que validar la estructura antes de medirla, y repetir la **captura visual** después de cualquier retoque de los `.md`, no solo el QA programático.
 
 ### Origen
 
