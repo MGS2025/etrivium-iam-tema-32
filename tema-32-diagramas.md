@@ -82,7 +82,7 @@
   <text x="340" y="20" text-anchor="middle" class="h2">La cadena del riesgo y donde actúa cada salvaguarda</text>
   <rect x="20" y="40" width="130" height="52" rx="5" fill="#0055a0"/><text x="85" y="60" text-anchor="middle" class="t2">ACTIVO</text><text x="85" y="74" text-anchor="middle" class="s2">tiene VALOR</text><text x="85" y="86" text-anchor="middle" class="s2">y VULNERABILIDADES</text>
   <rect x="196" y="40" width="130" height="52" rx="5" fill="#d13c3c"/><text x="261" y="60" text-anchor="middle" class="t2">AMENAZA</text><text x="261" y="74" text-anchor="middle" class="s2">externa al activo</text><text x="261" y="86" text-anchor="middle" class="s2">NO se puede eliminar</text>
-  <rect x="372" y="40" width="130" height="52" rx="5" fill="#e89822"/><text x="437" y="60" text-anchor="middle" class="t2">IMPACTO</text><text x="437" y="74" text-anchor="middle" class="s2">degradación de las/text><text x="437" y="86" text-anchor="middle" class="s2">dimensiones</text>
+  <rect x="372" y="40" width="130" height="52" rx="5" fill="#e89822"/><text x="437" y="60" text-anchor="middle" class="t2">IMPACTO</text><text x="437" y="74" text-anchor="middle" class="s2">degradación de las</text><text x="437" y="86" text-anchor="middle" class="s2">dimensiones</text>
   <rect x="548" y="40" width="112" height="52" rx="5" fill="#7a2f8a"/><text x="604" y="60" text-anchor="middle" class="t2">RIESGO</text><text x="604" y="74" text-anchor="middle" class="s2">impacto x</text><text x="604" y="86" text-anchor="middle" class="s2">probabilidad</text>
   <path d="M150 66 L192 66" stroke="#666" stroke-width="1.5" marker-end="url(#a2)"/>
   <path d="M326 66 L368 66" stroke="#666" stroke-width="1.5" marker-end="url(#a2)"/>

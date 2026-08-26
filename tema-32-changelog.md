@@ -55,6 +55,24 @@ Generación completa del tema desde el esqueleto oficial `Test_Prompting/temas a
 - Decidir si el **T23** se actualiza al OWASP Top 10:2025 para que ambos temas citen la misma edición.
 - Reverificar los **datos volátiles** antes de cada convocatoria: vigencia del ENS y sus ITS, versión de la CCN-STIC 807, calendario de la cartera europea de identidad digital, transposición de NIS2, edición del OWASP Top 10 y versión del CVSS.
 
+### Corrección posterior a la publicación (mismo día)
+
+**D2 quedó truncado por un `sed` y ningún control lo detectó.** Al corregir las tildes del texto de los SVG se usó `sed -i ''` con patrones que terminaban en `<` justo antes del delimitador `/` (`s/>degradacion de las</>degradación de las</`). En **D2** eso se comió el `<` de un `</text>` de cierre, dejando `degradación de las/text>`: el SVG quedó **mal formado** y el navegador **descartó en silencio** todo lo que venía después —la caja RIESGO, las tres flechas, el bloque de tratamiento del riesgo y el riesgo residual—.
+
+Lo grave no es la errata, es que **pasó los tres controles**:
+- El **getBBox** dio «0 desbordes y 0 colisiones»: un SVG truncado no tiene elementos que desborden ni colisionen, así que devuelve un **falso OK**.
+- El **recuento de `<svg`** seguía siendo 18, porque la etiqueta de apertura estaba intacta.
+- La **revisión visual** se hizo **antes** de aplicar el `sed`, y no se repitió después.
+
+Detectado por Joan al mirar el tema publicado.
+
+**Dos lecciones incorporadas:**
+
+1. **No usar `sed` sobre estos ficheros para tocar texto con acentos o marcado.** Usar Python con `str.replace()` y una aserción del número de coincidencias, como el `fix_tildes.py` de esta misma sesión, que no rompió nada.
+2. **Validar los SVG como XML antes de medirlos.** Añadida al arranque del QA una pasada con `xml.etree.ElementTree.fromstring()` sobre cada `<svg>...</svg>`, que aborta si alguno está mal formado, más una comprobación de que el número de SVG del DOM coincide con el del fichero. Sin esa pasada, el getBBox miente.
+
+**Regla general que se deriva:** después de cualquier retoque sobre los `.md`, hay que **repetir la captura visual**, no solo el QA programático.
+
 ### Origen
 
 - **Esqueleto**: `Test_Prompting/temas agosto/32.md` (6 bloques de primer nivel, 14 subapartados, sin quinto nivel salvo el señalado).
