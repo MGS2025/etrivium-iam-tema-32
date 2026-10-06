@@ -845,7 +845,7 @@ C) Firmar el documento antes de cifrarlo, siempre con el mismo par de claves
 
 **Correcta: B) Cifrar los datos con una clave de sesión simétrica y proteger esa clave de sesión con la clave pública del receptor** Es el mecanismo de TLS, S/MIME, PGP e IPsec, y resuelve a la vez la lentitud de la asimétrica y el problema de distribución de claves de la simétrica: la asimétrica **negocia la clave** y la simétrica **cifra el tráfico**.
 
-*Referencia: §5.1.1 [RFC8446]*
+*Referencia: §5.1.1 [RFC9846]*
 </details>
 
 ---
@@ -862,7 +862,7 @@ C) El servidor pueda reutilizar el mismo certificado en varios dominios
 
 **Correcta: A) Quien obtenga en el futuro la clave privada del servidor pueda descifrar el tráfico capturado y almacenado en el pasado** Se consigue negociando la clave de sesión con **Diffie-Hellman efímero** (DHE o ECDHE), con parámetros desechables en cada sesión. **TLS 1.3 la hace obligatoria** y por eso eliminó el intercambio de claves basado en RSA.
 
-*Referencia: §5.1.1 y §5.2.1 [RFC8446]*
+*Referencia: §5.1.1 y §5.2.1 [RFC9846]*
 </details>
 
 ---
@@ -907,13 +907,13 @@ C) El modo transporte utiliza AH obligatoriamente y el modo túnel, ESP
 
 A) SSL 3.0 sigue admitido para compatibilidad con clientes antiguos, y TLS 1.0 es la versión recomendada
 B) SSL 2.0 y 3.0 están prohibidos, TLS 1.0 y 1.1 están declarados obsoletos y las versiones vigentes son TLS 1.2 y TLS 1.3
-C) Solo TLS 1.3 está admitido; TLS 1.2 quedó prohibido con la publicación del RFC 8446
+C) Solo TLS 1.3 está admitido; TLS 1.2 quedó prohibido al publicarse el RFC 9846
 
 <details><summary>Respuesta</summary>
 
-**Correcta: B) SSL 2.0 y 3.0 están prohibidos, TLS 1.0 y 1.1 están declarados obsoletos y las versiones vigentes son TLS 1.2 y TLS 1.3** SSL 3.0 se prohibió por el RFC 7568 y TLS 1.0/1.1 se declararon obsoletos por el RFC 8996. Decir «certificado SSL» es un uso comercial heredado: lo que se despliega es TLS.
+**Correcta: B) SSL 2.0 y 3.0 están prohibidos, TLS 1.0 y 1.1 están declarados obsoletos y las versiones vigentes son TLS 1.2 y TLS 1.3** SSL 3.0 se prohibió por el RFC 7568 y TLS 1.0/1.1 se declararon obsoletos por el RFC 8996. El **RFC 9846** (julio de 2026) reedita TLS 1.3 y obsoleta las especificaciones anteriores, incluida la del RFC 5246, pero **no prohíbe TLS 1.2**. Decir «certificado SSL» es un uso comercial heredado: lo que se despliega es TLS.
 
-*Referencia: §5.2.1 [RFC7568] [RFC8996] [RFC8446]*
+*Referencia: §5.2.1 [RFC7568] [RFC8996] [RFC9846]*
 </details>
 
 ---

@@ -35,10 +35,10 @@ def inline(t):
 
 
 CALLOUTS = {
-    "DATO CLAVE EXAMEN": "dato",
+    "DATO CLAVE": "dato",
     "EJERCICIO RESUELTO": "ejercicio",
-    "EJEMPLO AYTO MADRID": "ayto",
-    "REFERENCIA CRUZADA": "ref",
+    "EJEMPLO DE APLICACIÓN EN EL AYTO": "ayto",
+    "RELACIÓN CON OTROS TEMAS": "ref",
 }
 
 
@@ -296,7 +296,7 @@ def build():
 <tr><td>Casos prácticos Ayto Madrid</td><td>3 casos (categorización, riesgo y protección física del sistema de expedientes; incidente de seguridad con exfiltración en una oficina de distrito; diseño criptográfico y de firma de un servicio nuevo de la sede)</td></tr>
 <tr><td>Fuentes Tier 1</td><td>40 referencias canónicas (ENS, CCN-STIC, MAGERIT, ISO/IEC, RGPD, LOPDGDD, eIDAS, IETF, NIST, ETSI)</td></tr>
 </tbody></table>
-<div class="callout ref"><span class="kicker">Cómo estudiar</span>Este es <strong>el tema más transversal del bloque técnico</strong>: su enunciado reúne <strong>seis materias</strong> que en otros temarios serían temas independientes. No se estudia de corrido. El orden que funciona es: primero <strong>§1</strong>, porque fija el vocabulario (dimensiones, riesgo, categorías) que usan las otras cinco secciones; después <strong>§5 y §6</strong>, que son el núcleo técnico más preguntable (criptografía y firma); y por último <strong>§2, §3 y §4</strong>, que se apoyan en lo anterior. Memoriza los <strong>Diagramas</strong> D1 (las cinco dimensiones y la categorización), D13 (simétrica, asimétrica y hash), D15 (AH y ESP) y D18 (modalidades de firma). Las cajas naranjas (DATO CLAVE) marcan lo memorizable: cifras, siglas, puertos, artículos y códigos de medida del ENS. Termina siempre por el bloque final del Contenido, <strong>«los siete datos que no se pueden fallar»</strong>.</div>"""
+<div class="callout ref"><span class="kicker">Cómo estudiar</span>Este es <strong>el tema más transversal del bloque técnico</strong>: su enunciado reúne <strong>seis materias</strong> que en otros temarios serían temas independientes. No se estudia de corrido. El orden que funciona es: primero <strong>§1</strong>, porque fija el vocabulario (dimensiones, riesgo, categorías) que usan las otras cinco secciones; después <strong>§5 y §6</strong>, que son el núcleo técnico (criptografía y firma); y por último <strong>§2, §3 y §4</strong>, que se apoyan en lo anterior. Memoriza los <strong>Diagramas</strong> D1 (las cinco dimensiones y la categorización), D13 (simétrica, asimétrica y hash), D15 (AH y ESP) y D18 (modalidades de firma). Las cajas naranjas (DATO CLAVE) marcan lo memorizable: cifras, siglas, puertos, artículos y códigos de medida del ENS. Termina siempre por el bloque final del Contenido, <strong>«los siete datos que no se pueden fallar»</strong>.</div>"""
 
     nav = (
         '<nav class="tabs">'

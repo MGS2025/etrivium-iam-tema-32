@@ -20,13 +20,13 @@ El enunciado oficial (BOAM 10.032, tema 32) enumera **seis materias**. Correspon
 | Técnicas criptográficas y protocolos seguros | §5 | ✅ Completo |
 | Mecanismos de firma digital | §6 | ✅ Completo |
 
-El **esqueleto de partida** (`Test_Prompting/temas agosto/32.md`) se ha seguido **literalmente** en sus seis bloques de primer nivel y en sus catorce subapartados. Ver la observación 1 sobre el único ajuste de estructura realizado.
+El **esqueleto de partida** se ha seguido **literalmente** en sus seis bloques de primer nivel y en sus catorce subapartados. Ver la observación 1 sobre el único ajuste de estructura realizado.
 
 ## 2. Contenido teórico
 
 - **6 secciones · 14 subsecciones · 22 epígrafes numerados** (numeración de tres niveles, `N.M.K`, coherente con el resto de la serie técnica).
 - **~25.000 palabras** medidas con `wc -w`. Es **el tema más extenso de toda la serie** hasta la fecha, por delante de T29 (≈21.200) y T28 (≈18.900). La causa es estructural y no de estilo: el enunciado oficial reúne **seis materias** que en otros temarios son temas independientes.
-- **4 tipos de callout**: `[DATO CLAVE EXAMEN]`, `[EJERCICIO RESUELTO]`, `[EJEMPLO AYTO MADRID]` y `[REFERENCIA CRUZADA]`.
+- **4 tipos de callout**: `[DATO CLAVE]`, `[EJERCICIO RESUELTO]`, `[EJEMPLO DE APLICACIÓN EN EL AYTO]` y `[RELACIÓN CON OTROS TEMAS]`.
 - **Caso de referencia transversal**: el sistema de tramitación de expedientes de la sede electrónica municipal, que atraviesa las seis secciones y enlaza con los tres casos prácticos.
 - Cierre con un bloque de **«los siete datos que no se pueden fallar»**, no numerado, a modo de resumen memorístico.
 
@@ -104,13 +104,13 @@ Todas correctas. **No** se ha citado ningún tema por «RGPD», siguiendo la adv
 
 ## Observaciones abiertas — a validar por María, Ana y el IAM
 
-1. **Un único ajuste de estructura sobre el esqueleto.** El esqueleto oficial anida bajo `#### Concepto de Seguridad de la Información` un quinto nivel (`##### Confidencialidad, Integridad, Disponibilidad, Autenticidad y No Repudio`). Para no romper la numeración de tres niveles de toda la serie (`1.1.1.`) se ha **promovido** ese quinto nivel a epígrafe propio, quedando: 1.1.1 concepto de seguridad · **1.1.2 las cinco dimensiones** · 1.1.3 análisis y gestión de riesgos. La decisión favorece el estudio, porque las dimensiones son el contenido más preguntable de la sección, pero **conviene confirmarla**. Es el mismo tipo de ajuste que se documentó en T27.
+1. **Un único ajuste de estructura sobre el esqueleto.** El esqueleto oficial anida bajo `#### Concepto de Seguridad de la Información` un quinto nivel (`##### Confidencialidad, Integridad, Disponibilidad, Autenticidad y No Repudio`). Para no romper la numeración de tres niveles de toda la serie (`1.1.1.`) se ha **promovido** ese quinto nivel a epígrafe propio, quedando: 1.1.1 concepto de seguridad · **1.1.2 las cinco dimensiones** · 1.1.3 análisis y gestión de riesgos. La decisión favorece el estudio, porque las dimensiones son el contenido central de la sección, pero **conviene confirmarla**. Es el mismo tipo de ajuste que se documentó en T27.
 
 2. **Frontera con el Tema 36 (seguridad en redes) y con el Tema 39 (ENS y ENI).** Es el punto más delicado del tema. El enunciado del T32 incluye «protocolos seguros» y «conceptos de seguridad», materias que se solapan con el T36 (seguridad perimetral, acceso remoto seguro, VPN, seguridad en el puesto) y con el T39 (principios básicos del ENS). El criterio aplicado ha sido: **en el T32 se desarrolla el mecanismo criptográfico y el marco de las dimensiones y medidas**; **se remite al T36 el despliegue perimetral** (cortafuegos, IDS/IPS, arquitectura de VPN) y **al T39 la gobernanza del ENS** (conformidad, distintivos, informe del estado de la seguridad, relación con el ENI). ¿Es el reparto que espera el IAM, o prefiere que el T32 desarrolle también el despliegue perimetral aun a costa de duplicar con el T36?
 
 3. **Frontera con el Tema 35 (HTTPS y SSL/TLS).** El T35 incluye expresamente «Protocolos HTTP, HTTPS y SSL/TLS». Aquí se ha tratado TLS desde su **mecanismo criptográfico** (saludo, confidencialidad directa, validación del certificado, estado de las versiones) y se ha remitido al T35 la perspectiva de arquitectura de red. Mismo tipo de decisión que la anterior.
 
-4. **Extensión.** Con ~25.000 palabras es el tema más largo de la serie. Se ha valorado dividirlo, pero el enunciado es unitario y el opositor lo estudiará como un solo tema. Si María o Ana consideran que la extensión es excesiva, los candidatos naturales a recorte son: el detalle de niveles Tier y de agentes de extinción (§2.2), la enumeración de ataques web (§4.1.2, ya cubiertos en el T23) y los modelos formales Bell-LaPadula/Biba/Clark-Wilson (§3.1.2). **No** conviene recortar §1 (dimensiones y riesgo) ni §6 (firma), que son el núcleo preguntable.
+4. **Extensión.** Con ~25.000 palabras es el tema más largo de la serie. Se ha valorado dividirlo, pero el enunciado es unitario y el opositor lo estudiará como un solo tema. Si María o Ana consideran que la extensión es excesiva, los candidatos naturales a recorte son: el detalle de niveles Tier y de agentes de extinción (§2.2), la enumeración de ataques web (§4.1.2, ya cubiertos en el T23) y los modelos formales Bell-LaPadula/Biba/Clark-Wilson (§3.1.2). **No** conviene recortar §1 (dimensiones y riesgo) ni §6 (firma), que son el núcleo del tema.
 
 5. **OWASP: edición 2025 frente a 2021.** Se ha adoptado el **Top 10:2025** como lista vigente, con la de 2021 documentada en paralelo, porque el T23 se publicó citando la de 2021 y numerosos pliegos siguen usándola. Si el IAM prefiere que ambos temas citen la misma edición, habría que actualizar el T23. **Punto a decidir**, no un error.
 
@@ -118,4 +118,4 @@ Todas correctas. **No** se ha citado ningún tema por «RGPD», siguiendo la adv
 
 7. **Umbrales del CVSS.** Se han recogido los de la **v3.1**, que es la versión que las bases de datos públicas siguen mostrando de forma mayoritaria. La **v4.0** (2023) mantiene el rango 0-10 y reordena las métricas. Si el IAM quiere que el tema se ciña a una sola versión, indicar cuál.
 
-8. **Cifras de disponibilidad de los niveles Tier.** Las cifras del Uptime Institute se han marcado como **orientativas** en el contenido, porque son valores de referencia del sector y no un requisito normativo. Se ha priorizado la **definición conceptual** (Tier III mantenible concurrentemente, Tier IV tolerante a fallos), que es lo que se pregunta.
+8. **Cifras de disponibilidad de los niveles Tier.** Las cifras del Uptime Institute se han marcado como **orientativas** en el contenido, porque son valores de referencia del sector y no un requisito normativo. Se ha priorizado la **definición conceptual** (Tier III mantenible concurrentemente, Tier IV tolerante a fallos), que es lo esencial.

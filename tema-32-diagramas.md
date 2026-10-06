@@ -74,7 +74,7 @@
 ## D2 · El modelo del riesgo: del activo al riesgo residual
 
 **Sección**: §1.1.3 — Análisis y gestión de riesgos
-**Propósito**: Encadenar los seis términos del análisis de riesgos en el orden causal correcto y mostrar dónde actúa la salvaguarda, que es la pregunta conceptual más repetida.
+**Propósito**: Encadenar los seis términos del análisis de riesgos en el orden causal correcto y mostrar dónde actúa la salvaguarda.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img" aria-label="Modelo del riesgo según MAGERIT: un activo tiene valor y vulnerabilidades, una amenaza externa las explota produciendo un impacto, la combinación de impacto y probabilidad es el riesgo, las salvaguardas lo reducen y lo que queda es el riesgo residual que debe aceptarse formalmente">
@@ -332,7 +332,7 @@
 ## D9 · Modelos de control de acceso: DAC, MAC, RBAC y ABAC
 
 **Sección**: §3.1.2 — Modelos de control de acceso lógico
-**Propósito**: Comparar los cuatro modelos por quién decide y sobre qué base, e incorporar la dualidad Bell-LaPadula / Biba, que es el par más preguntado.
+**Propósito**: Comparar los cuatro modelos por quién decide y sobre qué base, e incorporar la dualidad Bell-LaPadula / Biba.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 354" role="img" aria-label="Comparativa de los cuatro modelos de control de acceso lógico: discrecional DAC, obligatorio MAC, basado en roles RBAC y basado en atributos ABAC, indicando quién decide, sobre qué base y su uso típico, más la dualidad entre los modelos formales de Bell-LaPadula para confidencialidad y Biba para integridad">
@@ -374,7 +374,7 @@
 ## D10 · Taxonomía del código malicioso y vectores de infección
 
 **Sección**: §4.1.1 — Código malicioso y vectores de infección
-**Propósito**: Separar la clasificación por forma de propagación de la clasificación por carga útil, que es donde se produce el error de examen, y enumerar los vectores de entrada con su contramedida.
+**Propósito**: Separar la clasificación por forma de propagación de la clasificación por carga útil, que es donde se produce el error más frecuente, y enumerar los vectores de entrada con su contramedida.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 365" role="img" aria-label="Taxonomía del código malicioso separando la clasificación por forma de propagación (virus, gusano, troyano y bomba lógica) de la clasificación por carga útil (secuestro de datos, programa espía, puerta trasera, encubridor y red de equipos zombi), más los vectores de infección y su contramedida en el Esquema Nacional de Seguridad">
@@ -453,7 +453,7 @@
 ## D12 · Ciclo de vulnerabilidades y ventana de exposición
 
 **Sección**: §4.2.1 — Detección, evaluación y gestión de parches
-**Propósito**: Mostrar las cinco fases del ciclo y, sobre una línea temporal, dónde empieza y dónde termina realmente la ventana de exposición, que es la trampa habitual del enunciado.
+**Propósito**: Mostrar las cinco fases del ciclo y, sobre una línea temporal, dónde empieza y dónde termina realmente la ventana de exposición, que es el matiz que más se confunde.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 352" role="img" aria-label="Ciclo de gestión de vulnerabilidades en cinco fases y línea temporal que muestra la ventana de exposición desde el descubrimiento de la vulnerabilidad hasta la aplicación efectiva del parche, con los umbrales de la puntuación CVSS y la diferencia entre CVE, CVSS y CWE">
@@ -560,9 +560,9 @@
   <text x="178" y="306" text-anchor="middle" class="t14">CONFIDENCIALIDAD DIRECTA (PFS)</text>
   <text x="178" y="323" text-anchor="middle" class="s14">Comprometer la clave privada del servidor NO descifra el tráfico pasado</text>
   <rect x="344" y="288" width="316" height="44" rx="4" fill="#2d8659"/>
-  <text x="502" y="306" text-anchor="middle" class="t14">TLS 1.3 · RFC 8446</text>
+  <text x="502" y="306" text-anchor="middle" class="t14">TLS 1.3 · RFC 9846</text>
   <text x="502" y="323" text-anchor="middle" class="s14">1-RTT · sin RSA de intercambio · solo AEAD · PFS obligatoria</text>
-  <text x="670" y="344" text-anchor="end" class="n14">[Fuente: RFC8446; RFC5246; DH]</text>
+  <text x="670" y="344" text-anchor="end" class="n14">[Fuente: RFC9846; RFC5246; DH]</text>
 </svg>
 ```
 
@@ -571,7 +571,7 @@
 ## D15 · IPsec: AH y ESP, modo transporte y modo túnel
 
 **Sección**: §5.2.1 — Protocolos de red y transporte: IPsec, TLS y SSL
-**Propósito**: Fijar los dos datos más preguntados —números de protocolo de AH y ESP— y visualizar sobre la estructura del paquete la diferencia entre modo transporte y modo túnel.
+**Propósito**: Fijar los dos datos clave —números de protocolo de AH y ESP— y visualizar sobre la estructura del paquete la diferencia entre modo transporte y modo túnel.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 352" role="img" aria-label="Estructura de los paquetes IPsec comparando la cabecera de autenticación AH que es el protocolo IP 51 y no cifra, con la carga de seguridad encapsulada ESP que es el protocolo IP 50 y sí cifra, y comparación del modo transporte que conserva la cabecera IP original con el modo túnel que encapsula el paquete completo con una nueva cabecera">
