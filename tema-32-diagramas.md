@@ -186,7 +186,7 @@
   <rect x="42" y="68" width="276" height="30" rx="4" fill="#1a6bb0"/><text x="180" y="87" text-anchor="middle" class="t5">2 · EDIFICIO — recepción, tarjeta, registro</text>
   <rect x="64" y="102" width="232" height="30" rx="4" fill="#3781c0"/><text x="180" y="121" text-anchor="middle" class="t5">3 · ZONAS — segmentación por planta</text>
   <rect x="86" y="136" width="188" height="30" rx="4" fill="#e89822"/><text x="180" y="155" text-anchor="middle" class="t5">4 · SALA TÉCNICA — doble factor</text>
-  <rect x="108" y="170" width="144" height="30" rx="4" fill="#d13c3c"/><text x="180" y="189" text-anchor="middle" class="t5">5 · BASTIDOR — cerradura</text>
+  <rect x="100" y="170" width="160" height="30" rx="4" fill="#d13c3c"/><text x="180" y="189" text-anchor="middle" class="t5">5 · BASTIDOR — cerradura</text>
   <text x="180" y="216" text-anchor="middle" class="n5">Cada anillo exige un control más estricto que el anterior</text>
   <rect x="368" y="34" width="292" height="166" rx="5" fill="#eef3f8"/>
   <text x="380" y="52" class="k5">ZONA CONTROLADA (definición del ENS)</text>
@@ -248,7 +248,7 @@
   <rect x="20" y="288" width="70" height="34" rx="3" fill="#666"/><text x="55" y="309" text-anchor="middle" class="s6">RACK</text>
   <rect x="96" y="288" width="90" height="34" rx="3" fill="#cfe4f7"/><text x="141" y="309" text-anchor="middle" class="d6">PASILLO FRÍO</text>
   <rect x="192" y="288" width="70" height="34" rx="3" fill="#666"/><text x="227" y="309" text-anchor="middle" class="s6">RACK</text>
-  <rect x="268" y="288" width="90" height="34" rx="3" fill="#f7cfcf"/><text x="313" y="309" text-anchor="middle" class="d6">PASILLO CALIENTE</text>
+  <rect x="268" y="288" width="90" height="34" rx="3" fill="#f7cfcf"/><text x="313" y="309" text-anchor="middle" class="d6" style="font-size:8px">PASILLO CALIENTE</text>
   <rect x="364" y="288" width="70" height="34" rx="3" fill="#666"/><text x="399" y="309" text-anchor="middle" class="s6">RACK</text>
   <rect x="444" y="288" width="216" height="34" rx="4" fill="#f5f5f5"/><text x="552" y="303" text-anchor="middle" class="d6">Frentes enfrentados y pasillo confinado</text><text x="552" y="316" text-anchor="middle" class="d6">ASHRAE clase A1: 18-27 °C de entrada</text>
   <text x="670" y="344" text-anchor="end" class="n6">[Fuente: ENS, mp.if.3-5; TIA942; ASHRAE]</text>
@@ -377,7 +377,7 @@
 **Propósito**: Separar la clasificación por forma de propagación de la clasificación por carga útil, que es donde se produce el error más frecuente, y enumerar los vectores de entrada con su contramedida.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 365" role="img" aria-label="Taxonomía del código malicioso separando la clasificación por forma de propagación (virus, gusano, troyano y bomba lógica) de la clasificación por carga útil (secuestro de datos, programa espía, puerta trasera, encubridor y red de equipos zombi), más los vectores de infección y su contramedida en el Esquema Nacional de Seguridad">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 372" role="img" aria-label="Taxonomía del código malicioso separando la clasificación por forma de propagación (virus, gusano, troyano y bomba lógica) de la clasificación por carga útil (secuestro de datos, programa espía, puerta trasera, encubridor y red de equipos zombi), más los vectores de infección y su contramedida en el Esquema Nacional de Seguridad">
   <style>.t10{font:700 10.5px system-ui,sans-serif;fill:#fff}.s10{font:8.5px system-ui,sans-serif;fill:#fff}.d10{font:9px system-ui,sans-serif;fill:#333}.h10{font:700 13px system-ui,sans-serif;fill:#0055a0}.k10{font:700 9.5px system-ui,sans-serif;fill:#0055a0}.n10{font:8.5px system-ui,sans-serif;fill:#666}</style>
   <text x="340" y="20" text-anchor="middle" class="h10">Dos clasificaciones distintas: cómo se propaga y qué hace</text>
   <text x="20" y="42" class="k10">A · POR SU FORMA DE PROPAGACIÓN</text>
@@ -402,7 +402,7 @@
   <rect x="328" y="296" width="332" height="26" rx="4" fill="#eef3f8"/><text x="338" y="313" class="d10">op.exp.4 actualizaciones + op.exp.2 bastionado</text>
   <rect x="20" y="326" width="300" height="26" rx="4" fill="#fbeaea"/><text x="30" y="343" class="d10">Cadena de suministro del software</text>
   <rect x="328" y="326" width="332" height="26" rx="4" fill="#fbeaea"/><text x="338" y="343" class="d10">op.ext.3 · OWASP A03:2025, nueva categoría propia</text>
-  <text x="670" y="357" text-anchor="end" class="n10">[Fuente: ENS, op.exp.6; OWASP2025]</text>
+  <text x="670" y="366" text-anchor="end" class="n10">[Fuente: ENS, op.exp.6; OWASP2025]</text>
 </svg>
 ```
 
@@ -551,11 +551,11 @@
   <text x="20" y="138" class="k14">EL SALUDO DE TLS, PASO A PASO</text>
   <rect x="20" y="146" width="90" height="132" rx="4" fill="#eef3f8"/><text x="65" y="164" text-anchor="middle" class="k14">CLIENTE</text>
   <rect x="570" y="146" width="90" height="132" rx="4" fill="#eef3f8"/><text x="615" y="164" text-anchor="middle" class="k14">SERVIDOR</text>
-  <rect x="118" y="150" width="444" height="24" rx="3" fill="#0055a0"/><text x="340" y="166" text-anchor="middle" class="s14">1 · ClientHello: versiones, suites de cifrado y valor aleatorio</text>
-  <rect x="118" y="178" width="444" height="24" rx="3" fill="#2d8659"/><text x="340" y="194" text-anchor="middle" class="s14">2 · ServerHello + CERTIFICADO X.509 del servidor</text>
-  <rect x="118" y="206" width="444" height="24" rx="3" fill="#e89822"/><text x="340" y="222" text-anchor="middle" class="s14">3 · El cliente VALIDA: cadena, vigencia, revocación y nombre</text>
-  <rect x="118" y="234" width="444" height="24" rx="3" fill="#7a2f8a"/><text x="340" y="250" text-anchor="middle" class="s14">4 · Negociación de la clave de sesión con ECDHE (efímero)</text>
-  <rect x="118" y="262" width="444" height="16" rx="3" fill="#333"/><text x="340" y="274" text-anchor="middle" class="s14">5 · Canal cifrado: a partir de aquí, simétrico</text>
+  <rect x="118" y="150" width="444" height="23" rx="3" fill="#0055a0"/><text x="340" y="165" text-anchor="middle" class="s14">1 · ClientHello: versiones, suites de cifrado y valor aleatorio</text>
+  <rect x="118" y="177" width="444" height="23" rx="3" fill="#2d8659"/><text x="340" y="192" text-anchor="middle" class="s14">2 · ServerHello + CERTIFICADO X.509 del servidor</text>
+  <rect x="118" y="204" width="444" height="23" rx="3" fill="#e89822"/><text x="340" y="219" text-anchor="middle" class="s14">3 · El cliente VALIDA: cadena, vigencia, revocación y nombre</text>
+  <rect x="118" y="231" width="444" height="23" rx="3" fill="#7a2f8a"/><text x="340" y="246" text-anchor="middle" class="s14">4 · Negociación de la clave de sesión con ECDHE (efímero)</text>
+  <rect x="118" y="258" width="444" height="20" rx="3" fill="#333"/><text x="340" y="272" text-anchor="middle" class="s14">5 · Canal cifrado: a partir de aquí, simétrico</text>
   <rect x="20" y="288" width="316" height="44" rx="4" fill="#0055a0"/>
   <text x="178" y="306" text-anchor="middle" class="t14">CONFIDENCIALIDAD DIRECTA (PFS)</text>
   <text x="178" y="323" text-anchor="middle" class="s14">Comprometer la clave privada del servidor NO descifra el tráfico pasado</text>
@@ -673,7 +673,7 @@
   <rect x="20" y="50" width="118" height="42" rx="4" fill="#888"/><text x="79" y="68" text-anchor="middle" class="t17">DOCUMENTO</text><text x="79" y="83" text-anchor="middle" class="s17">en claro</text>
   <rect x="152" y="50" width="118" height="42" rx="4" fill="#e89822"/><text x="211" y="68" text-anchor="middle" class="t17">RESUMEN</text><text x="211" y="83" text-anchor="middle" class="s17">SHA-256, tamaño fijo</text>
   <rect x="284" y="50" width="150" height="42" rx="4" fill="#2d8659"/><text x="359" y="68" text-anchor="middle" class="t17">CIFRAR EL RESUMEN</text><text x="359" y="83" text-anchor="middle" class="s17">con la clave PRIVADA</text>
-  <rect x="448" y="50" width="212" height="42" rx="4" fill="#0055a0"/><text x="554" y="68" text-anchor="middle" class="t17">DOCUMENTO + FIRMA + CERTIFICADO</text><text x="554" y="83" text-anchor="middle" class="s17">se envía o se archiva</text>
+  <rect x="448" y="50" width="212" height="42" rx="4" fill="#0055a0"/><text x="554" y="68" text-anchor="middle" class="t17" style="font-size:9.5px">DOCUMENTO + FIRMA + CERTIFICADO</text><text x="554" y="83" text-anchor="middle" class="s17">se envía o se archiva</text>
   <path d="M138 71 L148 71" stroke="#666" stroke-width="1.5"/><path d="M270 71 L280 71" stroke="#666" stroke-width="1.5"/><path d="M434 71 L444 71" stroke="#666" stroke-width="1.5"/>
   <text x="20" y="116" class="k17">VERIFICACIÓN · LO HACE QUIEN RECIBE</text>
   <rect x="20" y="124" width="150" height="42" rx="4" fill="#2d8659"/><text x="95" y="142" text-anchor="middle" class="t17">DESCIFRAR LA FIRMA</text><text x="95" y="157" text-anchor="middle" class="s17">con la clave PÚBLICA</text>
@@ -712,11 +712,11 @@
   <text x="123" y="83" text-anchor="middle" class="s18">firmante usa para firmar</text>
   <text x="123" y="101" text-anchor="middle" class="s18">No se le niegan efectos por ser electrónica</text>
   <rect x="237" y="34" width="206" height="76" rx="5" fill="#0055a0"/>
-  <text x="340" y="52" text-anchor="middle" class="t18">2 · AVANZADA (art. 26)</text>
-  <text x="340" y="68" text-anchor="middle" class="s18">Vinculada de forma única · identifica</text>
-  <text x="340" y="81" text-anchor="middle" class="s18">al firmante · control exclusivo ·</text>
-  <text x="340" y="94" text-anchor="middle" class="s18">detecta cualquier cambio posterior</text>
-  <text x="340" y="106" text-anchor="middle" class="s18">Mayor valor probatorio</text>
+  <text x="340" y="50" text-anchor="middle" class="t18">2 · AVANZADA (art. 26)</text>
+  <text x="340" y="65" text-anchor="middle" class="s18">Vinculada de forma única · identifica</text>
+  <text x="340" y="78" text-anchor="middle" class="s18">al firmante · control exclusivo ·</text>
+  <text x="340" y="91" text-anchor="middle" class="s18">detecta cualquier cambio posterior</text>
+  <text x="340" y="103" text-anchor="middle" class="s18">Mayor valor probatorio</text>
   <rect x="454" y="34" width="206" height="76" rx="5" fill="#2d8659"/>
   <text x="557" y="52" text-anchor="middle" class="t18">3 · CUALIFICADA</text>
   <text x="557" y="70" text-anchor="middle" class="s18">Avanzada + certificado</text>
